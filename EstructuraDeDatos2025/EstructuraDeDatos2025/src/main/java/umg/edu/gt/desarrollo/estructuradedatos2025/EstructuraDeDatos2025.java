@@ -8,47 +8,58 @@ import java.util.Arrays;
 import umg.edu.gt.desarrollo.estructuradedatos2025.clases.ClaseVectores;
 import umg.edu.gt.desarrollo.estructuradedatos2025.ejercicios.EjercicioVectores;
 import umg.edu.gt.desarrollo.estructuradedatos2025.ejercicios.EjercicioArrays;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *
  * @author wcordova
  */
+
+
 public class EstructuraDeDatos2025 {
-
+    private static final Logger logger = LogManager.getLogger(EstructuraDeDatos2025.class);
+    
+    
     public static void main(String[] args) {
-        ///////////////////////////////////
-        EjercicioArrays Ej1 = new EjercicioArrays();
-        
-        int[][] cuentas1 = { {1, 2, 3}, {3, 2, 1} };
-        int[][] cuentas2 = { {1, 5}, {7, 3}, {3, 5} };
-        int[][] cuentas3 = { {2, 8, 7}, {7, 1, 3}, {1, 9, 5} };
 
-        System.out.println(Ej1.riquezaCliente(cuentas1)); 
-        System.out.println(Ej1.riquezaCliente(cuentas2)); 
-        System.out.println(Ej1.riquezaCliente(cuentas3)); 
+        
+        ///////////////////////////////////
+        logger.info("Ejecutando la aplicación...");
+
+        int[][] cuentas = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int maxRiqueza = EjercicioArrays.riquezaCliente(cuentas);
+        logger.info("El cliente con mayor riqueza tiene: {}", maxRiqueza);
         
         
         ///////////////////////////////////
+        //logger.info("Ejecutando metodo Ordenar matrices...");
         int[][] mat = {
             {3, 3, 1, 1},
             {2, 2, 1, 2},
             {1, 1, 1, 2}
         };
 
-        System.out.println("Matriz original:");
-        Ej1.imprimirMatriz(mat);
+       
+        EjercicioArrays.imprimirMatriz(mat);
+        //logger.info("Matriz original contiene: {}", mat);
 
-        int[][] matrizOrdenada = Ej1.ordenarMatriz(mat);
+        int[][] matrizOrdenada = EjercicioArrays.ordenarMatriz(mat);
 
-        System.out.println("\nMatriz ordenada diagonalmente:");
-        Ej1.imprimirMatriz(matrizOrdenada);
+        EjercicioArrays.imprimirMatriz(matrizOrdenada);
+        //logger.info("Matriz ordenada: {}", matrizOrdenada);
+        
         
         ///////////////////////////////////
         
         int[] [] matriz = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         
-        System.out.println("\nSumatoria: ");
-        System.out.println(Ej1.sumarElementosMatriz(matriz));
+        System.out.println(EjercicioArrays.sumarElementosMatriz(matriz));
         
     }
     
