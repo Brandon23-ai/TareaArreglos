@@ -28,6 +28,7 @@ public class EjercicioLinkedList {
         public static void eliminarDuplicados(LinkedList<Integer> lista) {
             HashSet<Integer> seen = new HashSet<>();
             lista.removeIf(n -> !seen.add(n));
+            
         }
         
         public static void invertirLista(LinkedList<String> lista) {

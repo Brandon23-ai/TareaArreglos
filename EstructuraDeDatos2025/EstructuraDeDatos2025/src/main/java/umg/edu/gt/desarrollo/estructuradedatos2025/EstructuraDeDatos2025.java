@@ -8,6 +8,7 @@ import java.util.Arrays;
 import umg.edu.gt.desarrollo.estructuradedatos2025.clases.ClaseVectores;
 import umg.edu.gt.desarrollo.estructuradedatos2025.ejercicios.EjercicioVectores;
 import umg.edu.gt.desarrollo.estructuradedatos2025.ejercicios.EjercicioArrays;
+import umg.edu.gt.desarrollo.estructuradedatos2025.ejercicios.EjercicosTreeSetAndMap.AnalizadorFrecuenciaPalabras;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -81,6 +82,10 @@ public class EstructuraDeDatos2025 {
         System.out.println("Puntuación: " + ejercicio1.findTotal(numbers2));
         System.out.println("Puntuación: " + ejercicio1.findTotal(numbers3));
     }
+    
+    
+        
+    
     
     
 }
